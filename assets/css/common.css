@@ -1,0 +1,30 @@
+/* 공통소스 */
+.blind{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    margin: -1px;
+}
+h2.title {display: block;font-size: 24px;font-weight: 600;}
+
+/* dpi -> 도트퍼 인치 */
+.footer .group-bottom .call-area,
+.sc-bannerslide .start,
+.sc-bannerslide .start.on,
+.sc-bannerslide .prev,
+.sc-bannerslide .next,
+.sc-visual .start,
+.sc-visual .stop,
+.sc-visual .prev,
+.sc-visual .next,
+.sc-visual .stop,
+.sc-visual .start,
+.sc-board .more,
+.sc-new .link-all::after,
+.group-bottom .search-area .search-btn,
+.header .logo{
+    background-image: url(../img/head01-bg02.png);
+    background-repeat: no-repeat;
+}

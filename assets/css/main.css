@@ -1,0 +1,877 @@
+/* main page css */
+.inner{
+    width: 1152px;
+    margin: 0 auto;
+
+}
+#skipNav a{position:absolute;display: block;top:-30px; left:0; background:#000; height:30px; line-height:30px; color:#fff; font-size:12px; padding:0 6px;z-index: 1;}
+#skipNav a:focus,
+#skipNav a:active{top:0;}
+.main01-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto 0;
+}
+.main01-container .right-col{
+    width: 350px;
+}
+/* 메인슬라이드 */
+.sc-visual{
+    position: relative;
+}
+.sc-visual .slide-area{
+    position: absolute;
+    left: 80px;
+    top: 0;
+    width: 770px;
+    height: 350px;
+    box-sizing: border-box;
+}
+/* tab */
+.sc-visual .group-tab{
+}
+.sc-visual .group-tab button{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 80px;
+    height: 175px;
+    background-color: #d2e1e9;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+.sc-visual .group-tab button.on{
+    color: #fff;
+    background-color:#0158a8;
+}
+.sc-visual .group-tab button.on::before{
+    content: " ";
+    position: absolute;
+    z-index: 10;
+    left: 99%;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 0 25px 32px;
+    border-color: transparent transparent transparent #0158a8;
+    margin-top: -25px;
+}
+.sc-visual .group-tab .icon{
+    border-radius: 50%;
+    background-color: #fff;
+}
+.sc-visual .group-tab .btn-news .icon::before{
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(../img/main01-ico01.png) no-repeat 0 0;
+}
+.sc-visual .group-tab .btn-citizen .icon::before{
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(../img/main01-ico01.png) no-repeat -49px 0;
+}
+/* main slide img */
+.sc-visual .slide-area{
+    position:absolute;
+    top: 0;
+    left: 80px;
+    width: 690px;
+}
+.sc-visual .slide-area  .swiper-slide{}
+.sc-visual .slide-area  .swiper-slide a{}
+.sc-visual .slide-area  .swiper-slide .title{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0 122px 0 10px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 14px;
+    background-color:rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+}
+/* pagination */
+.sc-visual .slide-area .control{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    width: 120px;
+    height: 38px;
+}
+.sc-visual .slide-area .control::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 75px;
+    width: 1px;
+    height: 18px;
+    background: rgba(255,255,255,.5);
+}
+.sc-visual .slide-area .pagination{
+    position: absolute;
+}
+.sc-visual .slide-area .control button{
+    position: absolute;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+.sc-visual .slide-area .prev{
+    left: 45px;
+    background-position: -237px -284px;
+}
+.sc-visual .slide-area .next{
+    right: 8px;
+    background-position: -255px -284px;
+}
+
+.sc-visual .slide-area .start{
+    position: absolute;
+    right: 30px;
+    width: 20px;
+    height: 20px;
+    right: 28px;
+    background-position: -283px -284px;;
+}
+.sc-visual .slide-area .start.on{
+    background-position: -269px -284px;;
+}
+
+
+.sc-visual .slide-area .pagination{color: #fff;}
+
+/* 코로나 배너 */
+.sc-covid{}
+.sc-covid .banner-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    height: 36px;
+    background-color: #99ddf4;
+}
+.sc-covid .title{
+    width: 54px;
+    height: 14px;
+    background: url(../img/covid-title.png) no-repeat 0 0;
+}
+.sc-covid .week{
+    line-height: 21px;
+    padding-left: 4px;
+    background-color: #319ac6;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+}
+.sc-covid .more{
+    position: relative;
+    line-height: 21px;
+    margin-left: 2px;
+    padding: 2.5px 4px;
+    padding-right: 10px;
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 13px;
+}
+.sc-covid .more::after{
+    position: absolute;
+    top: 6px;
+    right: 4px;
+    content: '';
+    display: inline-block;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-color: transparent transparent transparent #fff;
+}
+
+.sc-covid .date{
+    color: #000;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: -0.1em;
+}
+
+/* 서울동행버스 */
+.sc-municipal{
+    margin-top: 10px;
+    position: relative;
+    height: 204px;
+}
+.sc-municipal a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: url(../img/event02-cnt01.jpg) no-repeat center;
+    background-size: auto 100%;
+}
+.sc-municipal img{}
+.sc-municipal p{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    background: rgba(0,0,0, .7);
+    color: #fff;
+    font-weight: 700;
+    overflow: hidden;
+}
+
+/* 서울시장 오세훈입니다 */
+.sc-mayor{margin-top: 10px;}
+.sc-mayor .content{
+    position: relative;
+    width: 100%;
+    height: 90px;
+    background: url(../img/event03-bnr01.png) no-repeat 0 0;
+}
+.sc-mayor .content .event03-link01{}
+.sc-mayor .content .event03-link02{
+    position: absolute;
+    top: 16px;
+    right: 8px;
+    width: 110px;
+    height: 30px;
+    background: url(../img/event03-btn01.png) no-repeat 0 0;
+}
+.sc-mayor .content .sub-list{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    height: 26px;
+}
+.sc-mayor .content li{
+    width: calc(25% - 1px);
+    height: 100%;
+    background-color: #8b7153;
+}
+.sc-mayor .content li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* 주요서비스 */
+.sc-service{
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 50px;
+    font-size: 14px;
+}
+.sc-service .group-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pb10
+    margin-bottom: 20px;
+    border-bottom: 1px solid #dbdbdb;
+}
+.sc-service  h2.title{
+    font-size: 24px;
+}
+.sc-service .right-box{}
+.sc-service .right-box a{
+    display: inline-block;
+    position: relative;    
+    width: 65px;
+    height: 30px;
+    margin-right: 14px;
+    background: url(../img/event04-cnt02.png) no-repeat 0 0;
+}
+.sc-service .right-box .link-stroy::after{
+    content: '';
+    position: absolute;
+    top: 9px;
+    right: -15px;
+    width: 1px;
+    height: 16px;
+    background: #dbdbdb;
+}
+.sc-service .right-box .link-stroy:hover{
+    background-position: 0 -30px;
+}
+.sc-service .right-box .link-festival{
+    margin-left: 14px;
+    background-position: -65px 0;
+}
+.sc-service .right-box .link-festival:hover{
+    background-position: -65px -30px;
+}
+
+.sc-service .content .service-list{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px auto 0;
+}
+.sc-service .content .service-list li{
+    width: auto;
+    height: 90px;
+    text-align: center;
+}
+.sc-service .content .service-list a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.sc-service .content .name{font-size: 15px;}
+.sc-service .content .service-list a::before{
+    content: '';
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 10px;
+    background-image: url(../img/event04-cnt01.png);
+    background-repeat:no-repeat;
+    background-position: 0 0;
+    box-sizing: border-box;
+}
+.sc-service .content a.ic-public::before{background-position: -360px 0;}
+.sc-service .content a.ic-work::before{background-position: -120px 0;}
+.sc-service .content a.ic-info::before{background-position: -300px 0;}
+.sc-service .content a.ic-run::before{background-position: -180px 0;}
+.sc-service .content a.ic-welfare::before{background-position: -960px 0;}
+.sc-service .content a.ic-home::before{background-position: -780px 0;}
+.sc-service .content a.ic-young::before{background-position: -1140px 0;}
+.sc-service .content a.ic-hand::before{background-position: -1020px 0;}
+.sc-service .content a.ic-imagine::before{background-position: -60px 0;}
+.sc-service .content a.ic-ebook::before{background-position: -1080px 0;}
+.sc-service .content a.ic-city::before{background-position: -600px 0;}
+.sc-service .link-all{
+    position: absolute;
+    top: 0px;
+    left: 130px;
+    width: 112px;
+    height: 29px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: block;
+    font-size: 15px;
+    padding-left: 13px;
+    line-height: 28px;
+    background: url(../img/rt-arr02.png) no-repeat right 13px top 50%;
+}
+
+/* 상담번호 */
+.sc-direct {    
+    margin-top: 35px;
+    background: #eff4f8;
+}
+.sc-direct ul{
+    display: flex;
+    justify-content: center;
+    width: 1152px;
+    margin: 0 auto;
+}
+.sc-direct li a{
+    display: block;
+    padding: 20px 0;
+}
+
+/* 이벤트신청 , 이달의 행사 및 축제*/
+.inner2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1152px;
+    margin: 50px auto 0;
+}
+.sc-board{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.sc-board h2.title{
+    display: flex;
+    border-bottom: 2px solid #dbdbdb;
+    padding-bottom: 10px;
+}
+.sc-board .more{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    width: 22px;
+    height: 20px;
+    border: 1px solid #ddd;
+    background-position: -1px -1px;
+}
+.sc-board .board-list{
+    margin-top: 10px;
+    width: 360px;
+}
+.sc-board .board-list li{
+    display: flex;
+    width: 100%;
+    line-height: 36px;
+    position: relative;
+    font-size: 15px;
+    color: #222;
+}
+.sc-board .board-list a{
+    display: block;
+    max-width: 330px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.sc-board .board-list .eco{color:#599100;}
+.sc-board .board-list .home{color: #c35c3c;}
+.sc-board .board-list .welfare{color: #d76000;}
+.sc-board .board-list .economy{color: #069363;}
+.sc-board .board-list .traffic{color: #337ee2;;}
+.sc-board .board-list .culture{color: #9b64d3;;}
+
+
+/* 자주 찾은 서비스 */
+.sc-often{
+        width: 360px;
+}
+.sc-often h2{
+    padding-bottom: 15px;
+}
+.sc-often .often-list{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(5, 30px);
+    margin: 0;
+    padding: 20px;
+    background: #eff4f8;
+    box-sizing: border-box;
+}
+.sc-often .often-list li::before{
+    content: '';
+    position: absolute;
+    background: #666666;
+    width: 2px;
+    height: 2px;
+    left: 0;
+    top: 65%;
+    margin-top: -6px;
+}
+.sc-often .often-list li{
+    position: relative;
+    padding-left:  10px;
+    line-height: 30px;
+}
+.sc-often .often-list li a{
+    display: block;
+    width: 94%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+    color: #333;
+}
+
+/* 분야별정보 */
+.sc-field{
+    width: 1152px;
+    margin: 0 auto;
+    margin-top: 40px;
+    box-sizing: border-box;
+}
+.sc-field .field-list{
+    display: flex;
+    justify-content: center;
+    gap: 59px;
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+}
+.sc-field .field-list li{
+    width: 85px;
+    height: 145px;
+}
+.sc-field .field-list a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display:inline-block;
+    margin-top: 10px;
+    font-size: 16px;
+}
+.sc-field .field-list a::before{content: '';display:block;width: 85px;height: 100px;}
+.sc-field .field-list a.ic-home::before{background:url(../img/event08-cnt01.png) no-repeat 0 0;}
+.sc-field .field-list a.ic-economy::before{background:url(../img/event08-cnt02.png) no-repeat 0 0;}
+.sc-field .field-list a.ic-traffic::before{background:url(../img/event08-cnt03.png) no-repeat 0 0;}
+.sc-field .field-list a.ic-eco::before{background:url(../img/event08-cnt04.png) no-repeat 0 0;}
+.sc-field .field-list a.ic-welfare::before{background:url(../img/event08-cnt05.png) no-repeat 0 0;}
+.sc-field .field-list a.ic-safty::before{background:url(../img/event08-cnt06.png) no-repeat 0 0;}
+.sc-field .field-list a.ic-culture::before{background:url(../img/event08-cnt07.png) no-repeat 0 0;}
+.sc-field .field-list a.ic-admin::before{background:url(../img/event08-cnt08.png) no-repeat 0 0;}
+
+/* 새소식 */
+.sc-new .inner {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.sc-new .title{
+    padding: 10px 0;
+}
+.sc-new .link-all{
+    position: absolute;
+    right: 0;
+    top: -30px;
+    margin-top: 50px;
+    font-size: 15px;
+    color: #7d7d7d;
+    right: 30px;
+}
+.sc-new .link-all::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: -3px;
+    left: 48px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-position: -56px -257px;
+}
+.sc-new .new-list{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,auto);
+    margin-top: 20px;
+}
+.sc-new .new-list li{
+    width: 273px;
+}
+.event09-area .new-list li a{
+    display: block;
+    width: 100%;
+}
+.sc-new .new-list li .img-box{
+    position: relative;
+    overflow: hidden;
+}
+.sc-new .new-list li .img-box img{
+    width: auto;
+    min-width: 273px;
+    height: 188px;
+    transform: scale(1.0);
+    transition: transform 0.3s ease-in-out;
+}
+.sc-new .new-list li .img-box:hover img{
+    transform: scale(1.1);
+}
+.sc-new .new-list li .img-box.exc img{transform: inherit;height: inherit;}
+.sc-new .new-list li em{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 82px;
+    height: 32px;
+    color: #fff;
+    text-align: center;
+    line-height: 32px;
+    z-index: 1;
+    font-size: 14px;
+}
+.sc-new .new-list li .eco{background-color: #599100;}
+.sc-new .new-list li .welfare{background-color: #d76000;;}
+.sc-new .new-list li .safty{background-color: #e44869;}
+.sc-new .new-list li .admin{background-color: #028ab6;}
+.sc-new .new-list li p{
+    margin-top: 15px;
+    font-size: 16px;
+    width: 100%;
+    height: 3em;
+    line-height: 1.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-wrap: normal;
+    color: #222;
+    word-break: keep-all;
+}
+
+.main03-container {
+    display: flex;
+    gap: 21px;
+    width: 1152px;
+    margin: 20px auto 0px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+    border-bottom: 2px solid #000;
+}
+
+/* 서울영상 */
+.sc-media .inner{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+.sc-media .group-video{
+    width: 280px;
+    box-sizing: border-box;
+}
+.sc-media h3.title{
+    padding: 10px 0;
+    font-size: 24px;
+}
+.sc-media .group-video .content{
+    position: relative;
+    margin-top: 10px;
+    width: 100%;
+    height: 152px;
+    overflow: hidden;
+}
+.sc-media .group-video .content img{
+    transform: scale(1.0);
+    transition: transform 0.3s ease-in-out;
+}
+.sc-media .group-video .content:hover img{transform: scale(1.1);}
+.sc-media .group-video .content p{
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    background-color: rgba(0,0,0,.5);
+    padding: 11px 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+/* 서울소식 */
+.group-news{
+    width: 480px;
+    box-sizing: border-box;
+}
+.group-news{
+    padding: 10px 0;
+}
+.group-news .news-list{
+    width: 100%;
+    margin-top: 10px;
+}
+.group-news .news-list li{
+    padding: 10px 0;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    color: #555555;
+}
+.group-news .badge{
+    font-size: 16px;
+    font-weight: 400;
+    color: #09ac43;
+    margin-right: 18px;
+}
+.group-news .news-list li title{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    text-decoration: none;
+    color: #555;
+}
+/* 서울시sns */
+.group-sns{
+    width: 350px;
+    height: 195px;
+    background: url(../img/event12-cnt01.jpg) no-repeat 0 0;
+}
+.sns-wrap{
+    position: relative;
+}
+.sns-wrap .title{
+    position: absolute;
+    top: 7px;
+    left: 15px;
+    padding: 10px 0;
+}
+.sns-wrap .content{
+    margin-top: 10px;
+    overflow: hidden;
+    position: absolute;
+    top: 78px;
+    left: 53%;
+    width: 276px;
+    height: 40px;
+    margin-left: -138px;
+}
+.sns-wrap .content a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/event12-cnt02.png);
+    background-repeat:no-repeat;
+}
+.sns-wrap .event12-ico02{background-position: -40px 0;}
+.sns-wrap .event12-ico03{background-position: -80px 0;}
+.sns-wrap .event12-ico04{background-position: -120px 0;}
+.sns-wrap .event12-ico05{background-position: -160px 0;}
+.sns-wrap .event12-ico06{background-position: -200px 0;}
+.sns-wrap .bottom-box{
+    display: block;
+    width: 350px;
+    height: 195px;
+}
+
+/* 배너 슬라이드 */
+.sc-bannerslide{
+    position: relative;
+    width: 1152px;
+    margin: 0 auto;
+    padding: 50px 0;
+    border-top: 2px solid #222;
+}
+.sc-bannerslide .control {
+    float: right;
+    display: flex;
+    align-items: center;
+    height: 38px;
+    margin-top: 5px;
+}
+.sc-bannerslide .pagination {
+    width: 30px;
+    font-size: 14px;
+    color: #222;
+    letter-spacing: -2px;
+}
+.sc-bannerslide .prev{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #999;
+    overflow: hidden;
+    background-position:  -45px -43px;
+}
+.sc-bannerslide .next{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #999;
+    overflow: hidden;
+    background-position: -86px -43px;
+}
+.sc-bannerslide .control button{
+    width: 20px;
+    height: 20px;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    overflow: hidden;
+}
+.sc-bannerslide .slide-area .start{
+    width: 20px;
+    height: 20px;
+    right: 28px;
+    background-position: -64px -44px;
+}
+.sc-bannerslide .slide-area .start.on{
+    background-position: -101px -43px;
+}
+
+/* 관련기관 */
+.sc-relate{
+    position: relative;
+    width: 1152px;
+    margin: 0 auto 20px;
+}
+.sc-relate  .relate-list{
+    display: flex;
+    overflow: hidden;
+}
+.sc-relate  .relate-list li{
+    flex: 1;
+}
+.sc-relate  .relate-list li button{
+    width: 100%;
+    height: 100%;
+}
+.sc-relate  .relate-list li .menu{
+    position: relative;
+    top: 0;left: 0;
+    display: block;
+    text-align: center;
+    padding: 16px 0;
+    border-top: 1px solid #d0d0d0;
+    border-bottom: 1px solid #d0d0d0;
+    border-right: 1px solid #d0d0d0;
+    background: #f7f7f7;
+    font-size: 14px;
+}
+.sc-relate  .relate-list li:nth-child(1) .menu{border-left: 1px solid #d0d0d0;}
+.sc-relate  .relate-list li .menu::after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 21px;
+    height: 7px;
+    width: 7px;
+    border-style: solid;
+    border-color: #373737;
+    border-width: 0px 2px 2px 0px;
+    transform: rotate(-135deg);
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform-origin: center center;
+}
+
+.sc-relate  .relate-list li.none .menu::after{display: none;}
+
+
+.sc-relate  .relate-list li .menu.on{background: #e2e2e2;}
+.sc-relate  .relate-list li .menu.on::after{
+    top: 18px;
+    transform: rotate(45deg);
+    transform-origin: center center;
+}
+
+.sc-relate  .relate-list li .sub{
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    width: 100%;
+    z-index: 10;
+}
+.sc-relate  .relate-list li .sub-list{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 10px 20px 20px;
+    background: #fff;
+    border-top: 1px solid #d0d0d0;
+    border-left: 1px solid #d0d0d0;
+    border-right: 1px solid #d0d0d0;
+}
+.sc-relate  .relate-list li .sub-menu{color: #555;margin-top: 10px;font-size: 14px;}
+.sc-relate  .relate-list li .sub-menu a{display: block;width: 100%;height: 100%;}
+
+
+
+
+
