@@ -1,3 +1,18 @@
+.fix-top{
+    position: fixed;
+    left: 50%;
+    margin-left: 600px;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    bottom: -100px;
+    transition: 1s;
+}
+.fix-top.show{
+    opacity: 1;
+    bottom: 100px;
+}
+
 /* main page css */
 .inner{
     width: 1152px;
@@ -43,6 +58,7 @@
     font-size: 14px;
     font-weight: 600;
     color: #333;
+    cursor: default;
 }
 .sc-visual .group-tab button.on{
     color: #fff;
