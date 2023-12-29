@@ -25,7 +25,7 @@ const mainSlide = new Swiper('.sc-visual .slide-area', {
         nextEl: '.next'
     }
 })
-
+//메인 슬라이드 탭버튼 이벤트
 $('.sc-visual .group-tab button').click(function () {
     idx=$(this).data('idx');
     $(this).addClass('on').siblings().removeClass('on');
@@ -43,16 +43,6 @@ mainSlide.on("slideChange",function(){
     }
     
 })
-
-
-
-
-
-
-
-
-
-
 
 
 //banner slide
@@ -80,16 +70,15 @@ $('.swiper .control .start').click(function(){
     
     if ($(this).hasClass('on')) {
         slideArr[idx].autoplay.start();
-        $(this).find('.blind').text("????")
+        $(this).find('.blind').text()
     } else {
         slideArr[idx].autoplay.stop();
-        $(this).find('.blind').text("????")
+        $(this).find('.blind').text()
     }
-
     $(this).toggleClass('on');
 })
 
-
+//상단으로 올라가기 버튼 이벤트
 $(window).scroll(function(){
     curr = $(this).scrollTop();
 
@@ -108,25 +97,24 @@ $('.fix-top').click(function(){
 
 
 //관련기관클릭
-$('.event14-item .menu').click(function(){
-
+$('.relate-item .menu').click(function(){
     if($(this).hasClass('on')){
-        $('.event14-item .menu').removeClass('on').siblings('.sub').stop().slideUp()
+        $('.relate-item .menu').removeClass('on').siblings('.sub').stop().slideUp()
     }else{
-        $('.event14-item .menu').removeClass('on').siblings('.sub').stop().slideUp()
+        $('.relate-item .menu').removeClass('on').siblings('.sub').stop().slideUp()
         $(this).addClass('on').siblings('.sub').stop().slideDown()
     }
 })
 
-
-$('.event14-area .sub li:first-child').keydown(function(e){
+//키보드 탭 이벤트 - 키코드
+$('.sc-relate .sub li:first-child').keydown(function(e){
     if (e.keyCode === 9 && e.shiftKey) {
-        $('.event14-item .menu').removeClass('on').siblings('.sub').stop().slideUp()
+        $('.relate-item .menu').removeClass('on').siblings('.sub').stop().slideUp()
     } 
 })
 
-$('.event14-area .sub li:last-child').keydown(function(e){
+$('.sc-relate .sub li:last-child').keydown(function(e){
     if (e.keyCode === 9 && !e.shiftKey) {
-        $('.event14-item .menu').removeClass('on').siblings('.sub').stop().slideUp()
+        $('.relate-item .menu').removeClass('on').siblings('.sub').stop().slideUp()
     } 
 })

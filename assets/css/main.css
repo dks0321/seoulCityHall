@@ -17,17 +17,19 @@
 .inner{
     width: 1152px;
     margin: 0 auto;
-
 }
+/* skip navigation */
 #skipNav a{position:absolute;display: block;top:-30px; left:0; background:#000; height:30px; line-height:30px; color:#fff; font-size:12px; padding:0 6px;z-index: 1;}
 #skipNav a:focus,
 #skipNav a:active{top:0;}
-.main01-container{
+
+.visual-container{
     display: flex;
     justify-content: space-between;
     margin: 10px auto 0;
+    max-width: 1152px;
 }
-.main01-container .right-col{
+.visual-container .right-col{
     width: 350px;
 }
 /* 메인슬라이드 */
@@ -301,7 +303,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    pb10
+    padding-bottom: 10px;
     margin-bottom: 20px;
     border-bottom: 1px solid #dbdbdb;
 }
@@ -379,7 +381,7 @@
 .sc-service .link-all{
     position: absolute;
     top: 0px;
-    left: 130px;
+    left: 260px;
     width: 112px;
     height: 29px;
     border: 1px solid #ddd;
