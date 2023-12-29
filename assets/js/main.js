@@ -26,7 +26,7 @@ const mainSlide = new Swiper('.sc-visual .slide-area', {
     }
 })
 
-$('.sc-visual .main-tab button').click(function () {
+$('.sc-visual .group-tab button').click(function () {
     idx=$(this).data('idx');
     $(this).addClass('on').siblings().removeClass('on');
 

@@ -43,8 +43,6 @@
     box-sizing: border-box;
 }
 /* tab */
-.sc-visual .group-tab{
-}
 .sc-visual .group-tab button{
     position: relative;
     display: flex;
@@ -58,7 +56,6 @@
     font-size: 14px;
     font-weight: 600;
     color: #333;
-    cursor: default;
 }
 .sc-visual .group-tab button.on{
     color: #fff;
