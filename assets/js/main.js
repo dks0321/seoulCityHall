@@ -2,12 +2,24 @@
 
 $('.select-btn').click(function(){
     // camelCase
-    url=$("#country-lang").val()
+    url=$("#countryLang").val()
     window.open(url)
 })
 
+//상단으로 올라가기 버튼 이벤트
+$(window).scroll(function(){
+    curr = $(this).scrollTop();
 
-
+    if (curr >= 30) {
+        $('.fix-top').addClass('show')
+    } else {
+        $('.fix-top').removeClass('show')
+        
+    }
+})
+$('.fix-top').click(function(){
+    window.scrollTo({top:0,behavior:"smooth"})
+})
 
 //main swiper
 const mainSlide = new Swiper('.sc-visual .slide-area', {
@@ -32,8 +44,7 @@ $('.sc-visual .group-tab button').click(function () {
 
     mainSlide.slideToLoop(idx)
 })
-
-
+//메인 슬라이드 변경시 탭버튼 이벤트
 mainSlide.on("slideChange",function(){
     console.log(this);
     if (this.realIndex >= 7) {
@@ -43,9 +54,7 @@ mainSlide.on("slideChange",function(){
     }
     
 })
-
-
-//banner slide
+//배너 슬라이드
 const bannerSlide = new Swiper('.sc-bannerslide .slide-area', {
     slidesPerView: 3,
     spaceBetween: 43,
@@ -63,7 +72,7 @@ const bannerSlide = new Swiper('.sc-bannerslide .slide-area', {
         nextEl: '.next'
     }
 })
-
+//슬라이드이벤트 정지버튼 이벤트
 const slideArr = [mainSlide,bannerSlide]
 $('.swiper .control .start').click(function(){
     idx = $(this).data('slide')
@@ -78,25 +87,8 @@ $('.swiper .control .start').click(function(){
     $(this).toggleClass('on');
 })
 
-//상단으로 올라가기 버튼 이벤트
-$(window).scroll(function(){
-    curr = $(this).scrollTop();
 
-    if (curr >= 30) {
-        $('.fix-top').addClass('show')
-    } else {
-        $('.fix-top').removeClass('show')
-        
-    }
-})
-$('.fix-top').click(function(){
-    window.scrollTo({top:0,behavior:"smooth"})
-})
-
-
-
-
-//관련기관클릭
+//관련기관 클릭 이벤트
 $('.relate-item .menu').click(function(){
     if($(this).hasClass('on')){
         $('.relate-item .menu').removeClass('on').siblings('.sub').stop().slideUp()
@@ -112,7 +104,6 @@ $('.sc-relate .sub li:first-child').keydown(function(e){
         $('.relate-item .menu').removeClass('on').siblings('.sub').stop().slideUp()
     } 
 })
-
 $('.sc-relate .sub li:last-child').keydown(function(e){
     if (e.keyCode === 9 && !e.shiftKey) {
         $('.relate-item .menu').removeClass('on').siblings('.sub').stop().slideUp()
